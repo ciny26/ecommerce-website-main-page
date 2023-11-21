@@ -12,13 +12,14 @@
             <li class="menu-item"><router-link to="">Contact</router-link></li>
         </ul>
     </nav>
+    
 </template>
 <script>
 export default {
     methods:{
         CloseMenu(){
             this.$store.commit('closeMenu')
-            console.log(this.menuValue)
+            
         },
         handleTransitionEnd() {
       if (!this.menuValue) {
@@ -28,12 +29,12 @@ export default {
         
     },
     computed:{
-        menuValue(){
+        menuVisibility(){
             return this.$store.state.menuOpen
         },  
         menuIsOpened(){
             return {
-                transform: this.menuValue ? 'translateX(0)' : 'translateX(-150%)',
+                transform: this.menuVisibility ? 'translateX(0)' : 'translateX(-150%)',
       };
         }
     }
@@ -50,7 +51,6 @@ export default {
         background-color: white;
         margin: 0;
         padding: 0;
-        border-right: 1px solid black;
         transition: transform 0.3s ease-in-out ;
     }
 .close-btn {
@@ -96,4 +96,5 @@ export default {
         color:var(--Very-dark-blue) ;
 
     }
+    
 </style>

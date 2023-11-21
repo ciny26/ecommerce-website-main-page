@@ -5,7 +5,7 @@ export default createStore({
     menuOpen : false
   },
   getters: {
-    getValue(state){
+    getMenuVisibility(state){
       return state.menuOpen
     }
   },

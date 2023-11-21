@@ -1,33 +1,55 @@
 
 export default {
     state:{
-       Product:{
-        Image:'',
-        Quantity:0,
-        unitPrice:125.00
-       } 
+      Image: '',
+      Quantity: null,
+      unitPrice: null,
+      addToChart: false,
+      cartVisible:false
     },
     getters:{
         getProductQuantity(state){
-            return state.Product.Quantity
+            return state.Quantity
         },
         getProductImage(state){
-            return state.Product.Image
+            return state.Image
         },
         getUnitPrice(state){
-            return state.Product.unitPrice.toFixed(2)
+            return  parseFloat(state.unitPrice).toFixed(2);
         },
         getTotalPrice(state){
-            return (state.Product.Quantity * state.Product.unitPrice).toFixed(2) 
+            return (parseFloat(state.Quantity) * parseFloat(state.unitPrice)).toFixed(2);
+        },
+        getProductavailability(state){
+          return state.addToChart
+        },
+        getCartVisibility(state){
+          return state.cartVisible
         }
+       
+        
 
 
     },
-    mutations:{
-        setQuantity(state,payload){
-             state.Product.Quantity = payload.value
-            },
+    mutations: {
+        setQuantity(state , payload) {
+            state.Quantity  = payload.value
+          },
+        setUnitPrice(state , payload){
+          state.unitPrice = payload.value
+        },
+        setImage(state , payload){
+          state.Image = payload.value
+        },
+        availableInCart(state,payload){
+          state.addToChart = payload.value
+        },
+        setCartVisibility(state , payload){
+          state.cartVisible = payload.value
+        },
         
-        
+          
+      },
+          
     }
-}
+
