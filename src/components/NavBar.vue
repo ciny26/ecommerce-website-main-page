@@ -78,6 +78,8 @@ export default {
         justify-content: space-between;
     }
     .profile-shop-icons{
+        display: flex;
+        align-items: center;
         position: relative;
     }
     .profile-shop-icons > *{
@@ -100,5 +102,27 @@ export default {
     }
     .avatar{
         margin-left: 10px;
+    }
+    @media (min-width:700px){
+        .nav-bar{
+        width: 80%;
+        height: 80px;
+        margin: 0 auto;
+        border-bottom: 0.5px solid black;
+        
+    }
+    .menu-icon{
+        display: none;
+    }
+    .logo-and-profile{
+        width: 100%;
+    }
+    .profile-shop-icons{
+        align-items: center;
+    }
+    .avatar{
+        width: 32px;
+        height: 34px;
+    }
     }
 </style>

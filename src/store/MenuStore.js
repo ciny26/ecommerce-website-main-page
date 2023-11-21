@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import CartStore from './CartStore'
+import MenuCheck from './MenuCheck'
 export default createStore({
   state: {
     menuOpen : false
@@ -21,6 +22,7 @@ export default createStore({
   actions: {
   },
   modules: {
-    cart : CartStore
+    cart : CartStore,
+    menuCheck:MenuCheck
   }
 })

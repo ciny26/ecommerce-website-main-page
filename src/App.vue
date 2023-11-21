@@ -33,12 +33,12 @@ export default {
 }
 html{
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
   
 }
 body{
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
 }
 #app {
@@ -48,7 +48,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--Very-dark-blue);
-  height: 100%;
+  min-height: 100vh;
   font-size: 16px;
   margin: 0;
 }
@@ -62,6 +62,9 @@ body{
         left: 0;
         z-index: 4;
     }
+@media (min-width:700px){
+  
+}
 
 
 </style>

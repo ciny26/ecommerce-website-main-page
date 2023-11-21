@@ -74,8 +74,8 @@ export default {
     .cart-container{
         display: block;
         position:absolute;
-        top: 20px;
-        left:calc((3vw)) ;
+        top: 10%;
+        left:3vw ;
         width: 90vw;
         height: 200px;
         background-color: white;
@@ -136,5 +136,74 @@ export default {
         align-items: center;
         justify-content: center;
 
+    }
+    @media (min-width:700px){
+        .cart-container{
+        display: block;
+        position:absolute;
+        top: 10%;
+        left: calc(100vw - 320px);
+        width: 300px;
+        height: 250px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: -9px 12px 18px -2px rgba(0,0,0,0.38);
+    }
+    .cart-container > *{
+        padding: 12px 12px;
+    }
+    .cart-title{
+        display: flex;
+        align-items: center;
+        height: 10%;
+        border-bottom: 1px solid hsl(220, 14%, 75%);
+        
+    }
+    .cart-infos{
+        justify-content: space-between;
+    }
+    .title{
+        text-align: left;
+        width: 100%;
+    }
+    .close-icon{
+        text-align: right;
+        cursor: pointer;
+    }
+    .cart-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60%;
+    }
+    .cart-infos{
+        display: flex;
+        align-items: center;
+    }
+    .cart-infos>*{
+        padding: 0 5px;
+    }
+    .product-image{
+        width: 25px;
+        height: 30px;
+    }
+    .delete-icon{
+        cursor: pointer;
+    }
+    .checkout-btn{
+        background-color: hsl(26, 100%, 55%);
+        color: white;
+        padding: 8px;
+        margin: 3px 6px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .empty-card-message{
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
     }
 </style>
