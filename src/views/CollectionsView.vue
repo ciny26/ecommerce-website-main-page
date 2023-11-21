@@ -29,7 +29,7 @@ export default {
     .collections{
       width: 100%;
       display: grid;
-      grid-template-columns: [image] 40% [desc] 40%; /* Define named lines for columns */
+      grid-template-columns: [image] 45% [desc] 40%; /* Define named lines for columns */
             grid-template-rows: auto; /* One row */
             gap: 50px; /* Adjust the gap between grid items */
             justify-content: center;

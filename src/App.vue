@@ -63,7 +63,9 @@ body{
         z-index: 4;
     }
 @media (min-width:700px){
-  
+  .cover{
+    display: none;
+  }
 }
 
 

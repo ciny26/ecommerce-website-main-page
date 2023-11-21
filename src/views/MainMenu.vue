@@ -1,5 +1,5 @@
 <template>
-    <nav class="menu" v-if="isMobile" :style="menuIsOpened" @transitionend="handleTransitionEnd,handleTransitionStart " >
+    <nav class="menu" :style="menuIsOpened" @transitionend="handleTransitionEnd,handleTransitionStart" >
         <div class="close-btn" @click="CloseMenu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -18,7 +18,7 @@
 export default {
     data() {
     return {
-      isMobile: false,
+      
     };
   },
     methods:{
@@ -31,11 +31,7 @@ export default {
          this.$el.style.display = 'none'
       }
     },
-    checkWindowSize() {
-      this.isMobile = window.innerWidth < 700;
-      this.$store.state.isDesktop = this.isMobile
-      console.log(this.$store.state.isMobile)
-    },
+    
         
     },
     computed:{
@@ -48,13 +44,7 @@ export default {
       };
         }
     },
-    mounted() {
-        this.checkWindowSize();
-        window.addEventListener('resize', this.checkWindowSize);
-  },
-    beforeUnmount() {
-        window.removeEventListener('resize', this.checkWindowSize);
-  },
+    
 }
 </script>
 <style>
@@ -115,38 +105,9 @@ export default {
     }
     @media (min-width:700px){
         .menu{
-        z-index: 1;
-        display:flex;
-        height: 100%;
-        background-color: white;
-        margin: 0;
-        padding: 0;
+        display: none;
+    }
         
-    }
-        .close-btn {
-            display: none;
-  
-    }
-        .menu-items{
-            display: flex;
-            height: 100%;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .menu-item{
-            text-align: center;
-            padding: 0.5rem;
-            
-        }
-        .menu-item:hover , .menu-item:active{
-            background-color: hsl(223, 64%, 98%);
-        }
-        .menu-item > *{
-            text-decoration: none;
-            
-
-        }   
 
 
     }

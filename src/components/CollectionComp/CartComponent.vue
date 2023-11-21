@@ -77,9 +77,10 @@ export default {
         top: 10%;
         left:3vw ;
         width: 90vw;
-        height: 200px;
+        height: 250px;
         background-color: white;
         border-radius: 6px;
+        box-shadow: -2px 16px 17px -6px rgba(0,0,0,0.65);
     }
     .cart-container > *{
         padding: 12px 12px;
