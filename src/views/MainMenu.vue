@@ -33,6 +33,8 @@ export default {
     },
     checkWindowSize() {
       this.isMobile = window.innerWidth < 700;
+      this.$store.state.isDesktop = this.isMobile
+      console.log(this.$store.state.isMobile)
     },
         
     },
