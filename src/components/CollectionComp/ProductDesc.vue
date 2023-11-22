@@ -162,17 +162,21 @@ export default {
             margin:12px 0 0 0;
         }
         .product-cont{
+            height: 70%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 20% 0;
+            
         }
         .description > *{
-            margin: 4px 0;
+            margin: 5% 0;
         }
         .price-and-remise{
         display: flex;
         flex-direction: column;
         width: 60%;
+        margin-bottom: 2%;
         
         }
         .new-price-remise{

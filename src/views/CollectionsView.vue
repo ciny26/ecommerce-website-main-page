@@ -28,12 +28,14 @@ export default {
   @media (min-width: 700px) {
     .collections{
       width: 100%;
+      min-height: 60vh;
+      max-height: 70vh;
       display: grid;
-      grid-template-columns: [image] 45% [desc] 40%; /* Define named lines for columns */
+      grid-template-columns: [image] 50% [desc] 35%; /* Define named lines for columns */
             grid-template-rows: auto; /* One row */
             gap: 50px; /* Adjust the gap between grid items */
             justify-content: center;
-      margin-top: 1rem;
+      
     }
     .collections :first-child{
       grid-column: image; /* Place this item in the 'image' column */

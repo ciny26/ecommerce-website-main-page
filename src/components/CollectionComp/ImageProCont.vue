@@ -181,10 +181,9 @@ export default {
         }
         .selected-image-container{
             display: flex;
-            width: 80%;
-            height: 70%;
-            max-height: 310px;
-            max-width: 344px;
+            max-width: 80%;
+            max-height:60%;
+            
             
            
         }
@@ -193,7 +192,6 @@ export default {
             justify-content: space-between;
             width: 80%;
             height: 20%; 
-            max-width: 344px;
             margin-top: 10px;  
         
         }
@@ -205,6 +203,7 @@ export default {
         img{
             width: 100%;
             border-radius: 6px;
+           
         }
         .next-previous-icons{
             display: none;
