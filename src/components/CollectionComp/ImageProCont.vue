@@ -181,7 +181,7 @@ export default {
         }
         .selected-image-container{
             display: flex;
-            max-width: 80%;
+            max-width: 60%;
             max-height:60%;
             
             
@@ -190,9 +190,9 @@ export default {
         .img-product-cont{
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            width: 60%;
             height: 20%; 
-            margin-top: 10px;  
+            margin-top: 18px;  
         
         }
         .image{
@@ -202,7 +202,8 @@ export default {
         }
         img{
             width: 100%;
-            border-radius: 6px;
+            
+            border-radius: 10px;
            
         }
         .next-previous-icons{
